@@ -8,24 +8,22 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Halo ini Row dan column"),
+          title: Text("Container"),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Text("hello world 1"),
-            Text("hello world 2"),
-            Text("hello world 3"),
-            Row(
-              children: <Widget>[
-                Text("hello world 4"),
-                Text("hello world 5"),
-                Text("hello world 6")
-              ],
-            )
-          ],
-        )
+        body: Container(
+          margin: EdgeInsets.all(10),
+          padding: EdgeInsets.all(10),
+          color: Colors.yellowAccent,
+          child: Container(
+            margin: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                gradient: LinearGradient(
+                    begin: Alignment.bottomRight,
+                    end: Alignment.topLeft,
+                    colors: <Color>[Colors.redAccent, Colors.amberAccent])),
+          ),
+        ),
       ),
     );
   }
