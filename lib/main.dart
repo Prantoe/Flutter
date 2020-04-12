@@ -10,18 +10,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Halo ini aplikasi pertama"),
         ),
-        body: Center(
-          child: Container(
-              color: Colors.lightBlueAccent,
-              width: 150,
-              height: 50,
-              child: Text(
-                "Lorem ipsum itu adalah kata kata yang blabla",
-                overflow: TextOverflow.ellipsis,
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.redAccent, fontSize: 20),
-              )),
-        ),
+        body: Column()
       ),
     );
   }
